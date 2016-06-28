@@ -2,7 +2,9 @@ var gulp = require('gulp');
 // Requires the gulp-sass plugin
 var sass = require('gulp-sass');
 // Gulp-Autoprefixer
-var autoprefixer = require('Gulp-Autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
+// es6-promise
+require('es6-promise').polyfill();
 
 gulp.task('default', function() {
   console.log('Hallo Welt');
