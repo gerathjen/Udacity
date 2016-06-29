@@ -1,5 +1,6 @@
 # Quelle:
 * Sources from Udacity Course: https://github.com/udacity/ud892
+* The Difference Between Minification and Gzipping: https://css-tricks.com/the-difference-between-minification-and-gzipping/
 * Node.js for Ubuntu / Debian Users: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 * Gulp for Beginners: https://css-tricks.com/gulp-for-beginners/
 * Gulp: http://gulpjs.com/
