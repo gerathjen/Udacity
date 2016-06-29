@@ -46,10 +46,9 @@ gulp.task('lint', function () {
         .pipe(eslint.failOnError());
 });
 
-gulp.task('tests', function () {
-    gulp.src('tests/spec/extraSpec.js')
-        .pipe(jasmine({
-            integration: true,
-            vendor: 'js/**/*.js'
-        }));
+gulp.task('tests', function() {
+  return gulp.src('tests/test.js')
+          .pipe(jasmine({
+            integration: true
+          }));
 });
