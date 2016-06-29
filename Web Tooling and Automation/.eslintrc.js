@@ -5,19 +5,19 @@ module.exports = {
     "extends": "eslint:recommended",
     "rules": {
         "indent": [
-            "error",
+            2,
             "tab"
         ],
         "linebreak-style": [
-            "error",
+            2,
             "unix"
         ],
         "quotes": [
-            "error",
-            "double"
+            2,
+            "single"
         ],
         "semi": [
-            "error",
+            2,
             "always"
         ]
     }
