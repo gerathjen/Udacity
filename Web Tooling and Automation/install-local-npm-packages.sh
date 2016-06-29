@@ -9,3 +9,5 @@ npm install es6-promise
 npm install eslint
 npm install gulp-eslint
 npm install gulp-jasmine-phantom
+npm install gulp-concat
+npm install gulp-uglify
