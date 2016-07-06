@@ -11,3 +11,5 @@ npm install gulp-eslint
 npm install gulp-jasmine-phantom
 npm install gulp-concat
 npm install gulp-uglify
+npm install gulp-babel
+npm install gulp-sourcemaps

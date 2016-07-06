@@ -13,3 +13,9 @@
 * ESLint - The pluggable linting utility for JavaScript and JSX: http://eslint.org/
 * ESLint for Sublime Text 3: https://github.com/roadhump/SublimeLinter-eslint
 * PhantomJS for Gulp: https://github.com/dflynn15/gulp-jasmine-phantom
+* Babel: https://babeljs.io/
+* Source Map: https://github.com/mozilla/source-map
+* imagemin-pngquant: https://github.com/imagemin/imagemin-pngquant
+* Tools for Scaffolding:
+  * Web Starter Kit: https://developers.google.com/web/tools/starter-kit/
+  * Yeoman: http://yeoman.io/ and http://yeoman.io/learning/

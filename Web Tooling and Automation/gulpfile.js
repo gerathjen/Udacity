@@ -15,6 +15,10 @@ var eslint = require('gulp-eslint')
 var jasmine = require('gulp-jasmine-phantom');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
+var sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('imagemin');
+const pngquant = require('imagemin-pngquant');
 
 gulp.task('default', ['copy-html', 'copy-images', 'styles', 'lint', 'scripts'], function() {
     gulp.watch('sass/**/*.scss', ['styles']);
@@ -37,14 +41,18 @@ gulp.task('dist', [
 
 gulp.task('scripts', function() {
     gulp.src('js/**/*.js')
+        .pipe(babel())
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('scripts-dist', function() {
     gulp.src('js/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(babel())
         .pipe(concat('all.js'))
         .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -81,6 +89,15 @@ gulp.task('lint', function () {
         // To have the process exit with an error code (1) on
         // lint error, return the stream and pipe to failOnError last.
         .pipe(eslint.failOnError());
+});
+
+gulp.task('imagesizer', function() {
+    return gulp.src('img/*')
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('tests', function () {
