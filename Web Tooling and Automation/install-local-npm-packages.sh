@@ -13,3 +13,5 @@ npm install gulp-concat
 npm install gulp-uglify
 npm install gulp-babel
 npm install gulp-sourcemaps
+npm install gulp-imagemin
+sudo npm install -g yo
